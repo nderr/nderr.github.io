@@ -10,7 +10,10 @@ source "https://rubygems.org"
 #gem "jekyll", "~> 4.2.1"
 require 'json'
 require 'open-uri'
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+gem 'webrick' 
+gem 'pathutil', github: 'envygeeks/pathutil', ref: 'refs/pull/5/head'
+version_url = ::URI.open('https://pages.github.com/versions.json')
+versions = JSON.parse(version_url.read)
 gem "github-pages", versions['github-pages'], group: :jekyll_plugins
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 #gem "minima", "~> 2.5"

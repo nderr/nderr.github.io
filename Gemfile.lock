@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/envygeeks/pathutil.git
+  revision: 3451a10c362fc867b20c7e471a551b31c40a0246
+  ref: refs/pull/5/head
+  specs:
+    pathutil (0.16.2)
+      forwardable-extended (~> 2.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -232,13 +240,11 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.15.0)
     multipart-post (2.1.1)
-    nokogiri (1.13.1-arm64-darwin)
+    nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
     octokit (4.22.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
-    pathutil (0.16.2)
-      forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
     racc (1.6.0)
     rb-fsevent (0.11.0)
@@ -272,17 +278,20 @@ GEM
       unf_ext
     unf_ext (0.0.8)
     unicode-display_width (1.8.0)
+    webrick (1.7.0)
     zeitwerk (2.5.4)
 
 PLATFORMS
-  universal-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   github-pages (= 223)
   jekyll-feed (~> 0.12)
+  pathutil!
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
+  webrick
 
 BUNDLED WITH
    2.3.6
