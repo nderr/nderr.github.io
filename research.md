@@ -1,7 +1,6 @@
 ---
 layout: default
-carousels:
-  -
+carousels: "none"
 ---
 
 My research centers on interactions between fluid and solid aspects of systems, often in porous, deforming systems arising in biological contexts. Here are a few of my past and present projects.
