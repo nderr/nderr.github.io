@@ -71,6 +71,7 @@ defaults:
     scope:
       path: ""
     values:
+      inset: "carousel"
       carousels:
         - images:
           - image: /assets/img/erosion.png
