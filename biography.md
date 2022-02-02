@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![Me](/assets/img/me.png){: max-height=200 }
+![Me]({{ '/assets/img/me.png' | resize: "500x300>" }})
 
 I am a PhD Candidate in Applied Math at Harvard University, where I work with [Prof. Chris Rycroft](https://people.seas.harvard.edu/~chr). I use continuum mechanics to model physical and biological systems such as cytoskeletal gels, reciprocal swimmers, and branching erosion patterns. My work combines high-performance computation with simplified models because I believe the two approaches together are more than the sum of their parts. Simplified models reveal the underlying structure of a solution and give context to computational results, and efficient numerical methods allow for the evaluation of highly complex or intractable models.
 
