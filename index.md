@@ -10,4 +10,6 @@ My CV is [here](/assets/files/cv.pdf), and a longer bio is [here](/biography.htm
 
 [Here](/research.html) are some examples of my research.
 
+My email is derr at g dot harvard dot edu.
+
 Thanks for visiting!
