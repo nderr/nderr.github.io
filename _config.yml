@@ -65,6 +65,13 @@ kramdown:
 #   - vendor/ruby/
 exclude:
   - vender
+  - Gemfile
+  - Makefile
+  - write_index.py
+  - doi2cite.py
+  - index.md.in
+  - info.yaml
+  - cv
 
 defaults:
   -

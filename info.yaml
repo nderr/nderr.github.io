@@ -1,0 +1,39 @@
+preprints:
+  #  - 2206.14379
+  - 2202.03669
+
+papers:
+
+  - doi:   10.1073/pnas.2105338118
+    arxiv: 2104.00095
+
+  - doi:   10.1103/PhysRevLett.125.158002
+    arxiv: 2007.02997
+
+  - doi:   10.1029/2019GL083022
+  - doi:   10.1029/2018JE005717
+
+proper_nouns:
+  - Lunar Atmosphere and Dust Environment Explorer (LADEE)
+  - Reynolds
+  - Stokes
+
+education:
+  - institution: Harvard University
+    degrees:
+      - initials: S.M.
+        year: 2019
+      - initials: Ph.D.
+        year: 2022
+
+  - institution: Cambridge University
+    degrees:
+      - initials: M.A.St.
+        modifier: with Merit
+        year: 2016
+
+  - institution: University of Wisconsin--Madison
+    degrees:
+      - initials: B.S.
+        modifier: with Distinction
+        year: 2015
