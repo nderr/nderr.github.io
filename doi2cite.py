@@ -11,6 +11,9 @@ class DOI:
     output_types = ['tex','markdown','html']
     emph_types   = ['bold','ital']
 
+    def set_cofirst(self,cof):
+        self.cofirst = cof
+
     def set_links(self,links):
         self.links = links
 
@@ -62,11 +65,15 @@ class DOI:
                 print(f'  {t:s}')
             sys.exit(-1)
 
-    def __init__(self,doi):
+    def __init__(self,doi,silent=False):
+
 
         # go get citation information as JSON
         url = f'https://doi.org/{doi:s}'
         headers = {'accept': 'application/vnd.citationstyles.csl+json'}
+
+        if not silent:
+            print(f'Fetching DOI {doi:s}')
         r = req.get(url,headers=headers)
 
         # check for success
@@ -81,6 +88,7 @@ class DOI:
         self.output = 'tex'
         self.propers = []
         self.arxiv = None
+        self.cofirst = None
 
     def add_proper_nouns(self,propers):
         for p in propers:
@@ -157,7 +165,8 @@ class DOI:
             a1 = self.name(auth[0])
             a2 = self.name(auth[1])
 
-            return f'{a1:s} and {a2:s}'
+            if self.cofirst is not None:
+                return f'{a1:s}* and {a2:s}*'
 
         # if more, separate first n-1 with commas
         else:
@@ -166,7 +175,11 @@ class DOI:
             for i,a in enumerate(auth):
             
                 if i < n_auth-1:
-                    out += self.name(a) + ', '
+
+                    if i < 2 and self.cofirst is not None:
+                        out += self.name(a) + '*, '
+                    else:
+                        out += self.name(a) + ', '
                 else:
                     out += f'and {self.name(a):s}'
 

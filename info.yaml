@@ -7,8 +7,9 @@ papers:
   - doi:   10.1073/pnas.2105338118
     arxiv: 2104.00095
 
-  - doi:   10.1103/PhysRevLett.125.158002
-    arxiv: 2007.02997
+  - doi:     10.1103/PhysRevLett.125.158002
+    arxiv:   2007.02997
+    cofirst: True
 
   - doi:   10.1029/2019GL083022
   - doi:   10.1029/2018JE005717

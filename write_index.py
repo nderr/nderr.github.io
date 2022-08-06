@@ -91,6 +91,8 @@ with open(fn_in,'r') as f_in, open(fn_out,'w') as f_out:
                 doi.add_emph_name('N.J. Derr')
                 doi.set_links(True)
                 doi.add_proper_nouns(info['proper_nouns'])
+                if 'cofirst' in p:
+                    doi.set_cofirst(True)
 
                 if 'arxiv' in p:
                     doi.add_arxiv(str(p['arxiv']))
