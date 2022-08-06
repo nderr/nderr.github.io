@@ -73,6 +73,9 @@ exclude:
   - info.yaml
   - cv
 
+include:
+  - assets/css/style.css
+
 defaults:
   -
     scope:

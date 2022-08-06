@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+  color:#222;
+}
+
+a:hover, a:focus {
+  color:#036;
+  font-weight: revert;
+}
