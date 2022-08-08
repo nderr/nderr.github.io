@@ -18,7 +18,7 @@ if not fn_in[-3:] == '.in':
 
 fn_out = fn_in[:-3]
 
-def start_html_ordered_list(fout,key='key',pad='1.9em',tot=-1):
+def start_html_ordered_list(fout,key='key',pad='0em',tot=-1):
 
     print("<style>",file=fout)
     print(f'ol.{key:s}>li::marker {{',file=fout)

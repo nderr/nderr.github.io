@@ -1,6 +1,7 @@
 ---
 layout: default
 inset: "none"
+title: Research
 ---
 
 My research centers on interactions between fluid and solid aspects of systems, often in porous, deforming systems arising in biological contexts. Here are a few of my past and present projects.
@@ -8,12 +9,12 @@ My research centers on interactions between fluid and solid aspects of systems, 
 ### Erosion dynamics
 Branching patterns can be seen in nature in a wide variety of contexts, from small biological systems (venation systems) to large geophysical settings (river systems.) A simple mechanical model for erosion is capable of producing branching patterns such as these. ([PRL](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.158002), [arXiv](https://arxiv.org/abs/2007.02997)) 
 
-![Branching patterns](/assets/img/erosion.png "A simple mechanical rule for erosion gives rise to beautiful branching patterns."){: max-width="10" }
+![Branching patterns](/assets/img/erosion.png "A simple mechanical rule for erosion gives rise to beautiful branching patterns."){: class="scaling"}
 
 ### Reference map methods
 The [reference map technique](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/reference-map-technique-for-incompressible-fluidstructure-interaction/D6914B1100E29B4BA9B73A010820CADD) is a fully Eulerian technique for the coupled simulation of immersed soft solid bodies in fluid. In three dimensions, the technique is well-suited for the simulation of many interacting bodies, such as the setting spheres shown here, or active solids. ([PNAS](https://www.pnas.org/content/119/1/e2105338118), [arXiv](https://arxiv.org/abs/2104.00095)).
 
-![Settling soft spheres](/assets/img/balls.png)
+![Settling soft spheres](/assets/img/balls.png){: class="scaling"}
 
 ### Reciprocal swimmers
 

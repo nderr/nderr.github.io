@@ -18,21 +18,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Nick Derr
-email: nicholas.derr@gmail.com
+title: Nicholas J. Derr
+# email: nicholas.derr@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Math, computing, biology, physics
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://nderr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: doc_derr
-github_username:  nderr
+url: "https://www.nickderr.me" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: #doc_derr
+github_username:  #nderr
 
 
 github:
   is_user_page: true
   is_project_page: false
 
-remote_theme: pages-themes/minimal@v0.2.0
+#remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: jekyll/minima@v2.5.1
 
 # Build settings
 #theme: minima
@@ -73,9 +74,6 @@ exclude:
   - info.yaml
   - cv
 
-include:
-  - assets/css/style.css
-
 defaults:
   -
     scope:
@@ -87,3 +85,7 @@ defaults:
           - image: /assets/img/erosion.png
           - image: /assets/img/balls.png
           - image: /assets/img/gels.png
+
+header_pages:
+  - biography.md
+  - research.md

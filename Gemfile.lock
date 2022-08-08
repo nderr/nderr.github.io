@@ -230,8 +230,6 @@ GEM
     minitest (5.16.2)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -279,6 +277,7 @@ DEPENDENCIES
   github-pages (= 227)
   jekyll-feed (~> 0.12)
   jekyll-resize!
+  minima
   pathutil!
   tzinfo (~> 1.2)
   tzinfo-data

@@ -1,23 +1,24 @@
 ---
 layout: default
+title: Home
 ---
 
-# Greetings!
 
-I use math to model and study systems in physics and biology as an Instructor at [MIT](https://math.mit.edu). I completed my PhD in Applied Math at [Harvard](https://www.seas.harvard.edu), where I was advised by [Chris Rycroft](https://people.math.wisc.edu/~chr).
+![This is me](/assets/img/me.png "This is a picture of my face."){: align="left" width="200px" style="margin:0px 20px 0px 0px" vertical-align="top"}
 
-Links: [[CV]](/assets/files/cv.pdf), [[about me]](/biography.html), [[research]](/research.html).
+# Hi, I'm Nick Derr
+I use math to model and study systems in physics and biology at [MIT](https://math.mit.edu), where I'm an Instructor. I completed my PhD in Applied Math at [Harvard](https://www.seas.harvard.edu), where I was advised by [Chris Rycroft](https://people.math.wisc.edu/~chr). Before that, I majored in [Applied Math, Engineering and Physics](https://amep.math.wisc.edu) at the University of Wisconsin and did [Part III](https://www.maths.cam.ac.uk/postgrad/part-iii/current) at Cambridge University.
 
-My email is derr at mit dot edu.
+You can [click here for my CV](/assets/files/cv.pdf), or check out the [[About Me]](/biography.html) and [[Research]](/research.html) sections to learn more. My publications are listed below. Outside of math, I enjoy distance running, crossword puzzles and mass-market paperbacks.
 
-Thanks for visiting!
+My email is derr at mit dot edu. Thanks for visiting!
 
 # Preprints
 <style>
 ol.key>li::marker {
   content: "[" counter(list-item) "]  ";
 }
-ol.key { padding-left: 1.9em; }
+ol.key { padding-left: 0em; }
 ol.key>li:not(:last-child) {
   margin-bottom: 1em;
 }
@@ -32,7 +33,7 @@ ol.key>li:not(:last-child) {
 ol.key>li::marker {
   content: "[" counter(list-item) "]  ";
 }
-ol.key { padding-left: 1.9em; }
+ol.key { padding-left: 0em; }
 ol.key>li:not(:last-child) {
   margin-bottom: 1em;
 }

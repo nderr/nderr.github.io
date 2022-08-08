@@ -10,6 +10,7 @@ source "https://rubygems.org"
 #gem "jekyll", "~> 4.2.1"
 require 'json'
 require 'open-uri'
+gem 'minima'
 gem 'webrick' 
 gem 'pathutil', github: 'envygeeks/pathutil', ref: 'refs/pull/5/head'
 version_url = ::URI.open('https://pages.github.com/versions.json')
