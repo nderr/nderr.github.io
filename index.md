@@ -7,15 +7,16 @@ title: Home
 ![This is me](/assets/img/me.png "This is a picture of my face."){: align="left" width="200px" style="margin:0px 20px 0px 0px" vertical-align="top"}
 
 # Hi, I'm Nick Derr
-I use math to model and study systems in physics and biology at [MIT Math](https://math.mit.edu). I completed my PhD at [Harvard](https://www.seas.harvard.edu), where I was advised by [Chris Rycroft](https://people.math.wisc.edu/~chr). Before that, I majored in [Applied Math, Engineering and Physics](https://amep.math.wisc.edu) at the University of Wisconsin and did [Part III Maths](https://www.maths.cam.ac.uk/postgrad/part-iii/current) at Cambridge University.
+I use math to model and study systems in physics and biology at [MIT Math](https://math.mit.edu). I completed my PhD at [Harvard](https://www.seas.harvard.edu), where I was advised by [Chris Rycroft](https://people.math.wisc.edu/~chr). Before that, I majored in [Applied Math, Engineering and Physics](https://amep.math.wisc.edu) at the University of Wisconsin and did [Part III Maths](https://www.maths.cam.ac.uk/postgrad/part-iii/current) at Cambridge University. I enjoy long-distance running, crossword puzzles and old paperbacks.
 
-[My PhD research](/research.html) was focused on modeling systems with elements of fluid--structure interaction, including [eroding porous media](https://arxiv.org/abs/2007.02997) and [simple swimmers](https://arxiv.org/abs/2202.03669). I also developed high-performance computational methods for similar settings, such as [suspensions of soft immersed bodies](https://arxiv.org/abs/2104.00095) and [active gels](https://arxiv.org/abs/2206.14379).
 
-[Download my CV](/assets/files/cv.pdf) or check out the [About Me](/biography.html) and [Research](/research.html) sections to learn more.
-
-Outside of math, I enjoy long-distance running, crossword puzzles and old paperbacks.
+[My PhD research](/research.html) focused on modeling systems with elements of fluid--structure interaction, including [eroding porous media](https://arxiv.org/abs/2007.02997) and [simple swimmers](https://arxiv.org/abs/2202.03669). I also developed high-performance computational methods for similar settings, such as [suspensions of soft immersed bodies](https://arxiv.org/abs/2104.00095) and [active gels](https://arxiv.org/abs/2206.14379). [Download my CV](/assets/files/cv.pdf) or check out the [About Me](/biography.html) and [Research](/research.html) sections to learn more.
 
 My email is derr at mit dot edu. Thanks for visiting!
+
+<div class="scaling">
+{% include carousel.html height="100" width="100" unit="%" duration="5" %}
+</div>
 
 # Preprints and Selected Publications
 <style>
