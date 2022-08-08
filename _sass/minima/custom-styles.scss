@@ -1,0 +1,35 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+
+.scaling {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: $med-img-size) {
+    max-width: calc(var(--cutoff,#{$med-img-size}) - #{$spacing-unit} );
+  }
+}
+
+ol.brackets>li::marker {
+  content: "[" counter(list-item) "]  ";
+}
+
+ol.brackets>li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+ol.brackets {
+  padding-left: 0em;
+}
+
+h1 {
+  font-size: $base-font-size * 1.25;
+  font-weight: bold;
+}
+
+footer {
+  display: none;
+}
