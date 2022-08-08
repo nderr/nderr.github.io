@@ -3,18 +3,17 @@ layout: default
 title: Home
 ---
 
+![This is me](/assets/img/me.png "This is a picture of my face."){: align="right" width="200px" style="margin:0px 0px 20px 20px" vertical-align="top"}
 
 # Hi, I'm Nick Derr!
-
-![This is me](/assets/img/me.png "This is a picture of my face."){: align="right" width="200px" style="margin:0px 0px 20px 20px" vertical-align="top"}
 
 I use math to model and study systems in physics and biology at [MIT Math](https://math.mit.edu). I completed my PhD at [Harvard](https://www.seas.harvard.edu), where I was advised by [Chris Rycroft](https://people.math.wisc.edu/~chr). Before that, I majored in [Applied Math, Engineering and Physics](https://amep.math.wisc.edu) at the University of Wisconsin and did [Part III Maths](https://www.maths.cam.ac.uk/postgrad/part-iii/current) at Cambridge University. I enjoy long-distance running, crossword puzzles and old paperbacks.
 
 My PhD research focused on modeling systems with elements of fluid--structure interaction, including [eroding porous media](https://arxiv.org/abs/2007.02997) and [simple swimmers](https://arxiv.org/abs/2202.03669). I also developed high-performance computational methods for similar settings, such as [suspensions of soft immersed bodies](https://arxiv.org/abs/2104.00095) and [active gels](https://arxiv.org/abs/2206.14379).
 
-[Download my CV](/assets/files/cv.pdf), read more [about me](/biography.html), or check out my [research](#research) below to learn more.
+Download my CV [here](/assets/files/cv.pdf). Read more about me [here](/biography.html). Below are some short summaries of my research and [publications](#preprints-and-selected-publications).
 
-My email is derr at mit dot edu. Thanks for visiting!
+My email is lastname at mit dot edu. Thanks for visiting!
 
 # Research
 My research centers on interactions between fluid and solid aspects of systems, often in porous, deforming systems arising in biological contexts. Here are a few of my past and present projects.
@@ -41,9 +40,9 @@ Our cells' interiors consist of a complex network of polymer filaments. This por
 
 ![Gel patterns](/assets/img/gels.png){: class="scaling"}
 
-
 # Preprints and Selected Publications
 %%% PREPRINTS %%%
 %%% PUBLIST %%%
 
 Asterisks denote equal contribution.
+
