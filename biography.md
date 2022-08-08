@@ -1,10 +1,9 @@
 ---
 layout: default
 inset: "image"
-inset_image: "/assets/img/me.png"
 ---
 
-### About Me
+# About Me
 
 My work combines high-performance computation with simplified analytical models because I believe the two yield more than the sum of their parts. Simplified models reveal the underlying structure of a solution and give context to computational results, and efficient numerical methods allow for the evaluation of highly complex or intractable models.
 

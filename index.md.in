@@ -3,9 +3,9 @@ layout: default
 title: Home
 ---
 
-![This is me](/assets/img/me.png "This is a picture of my face."){: align="right" width="200px" style="margin:0px 0px 20px 20px" vertical-align="top"}
-
 # Hi, I'm Nick Derr!
+
+![This is me](/assets/img/me.png "This is a picture of my face."){: align="right" width="200px" style="margin:0px 0px 20px 20px" vertical-align="top"}
 
 I use math to model and study systems in physics and biology at [MIT Math](https://math.mit.edu). I completed my PhD at [Harvard](https://www.seas.harvard.edu), where I was advised by [Chris Rycroft](https://people.math.wisc.edu/~chr). Before that, I majored in [Applied Math, Engineering and Physics](https://amep.math.wisc.edu) at the University of Wisconsin and did [Part III Maths](https://www.maths.cam.ac.uk/postgrad/part-iii/current) at Cambridge University. I enjoy long-distance running, crossword puzzles and old paperbacks.
 
