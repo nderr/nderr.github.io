@@ -26,7 +26,7 @@ def start_html_ordered_list(fout,key='key',pad='0em',tot=-1):
     print("}",file=fout)
     print(f'ol.{key:s} {{ padding-left: {pad:s}; }}',file=fout)
     print(f'ol.{key:s}>li:not(:last-child) {{',file=fout)
-    print("  margin-bottom: 1em;",file=fout)
+    print("  margin-bottom: 0.5em;",file=fout)
     print("}",file=fout)
     print("</style>",file=fout)
 
@@ -69,8 +69,12 @@ with open(fn_in,'r') as f_in, open(fn_out,'w') as f_out:
         if line.startswith('%%% PREPRINTS %%%'):
 
 
-            tot = len(info['papers']) + len(info['preprints'])
-            start_html_ordered_list(f_out,tot=tot)
+            #tot = len(info['preprints'])
+            #for p in info['papers']:
+            #    if 'selected' in p:
+            #        tot = tot+1
+
+            start_html_ordered_list(f_out)
 
             for obj in info['preprints']:
 
@@ -82,11 +86,11 @@ with open(fn_in,'r') as f_in, open(fn_out,'w') as f_out:
 
                 list_item(f_out,doi,justified=justified)
 
-            end_html_ordered_list(f_out)
+            #end_html_ordered_list(f_out)
 
         elif line.startswith('%%% PUBLIST %%%'):
 
-            start_html_ordered_list(f_out)
+            #start_html_ordered_list(f_out)
 
             for p in info['papers']:
 
@@ -99,7 +103,8 @@ with open(fn_in,'r') as f_in, open(fn_out,'w') as f_out:
                 if 'arxiv' in p:
                     doi.add_arxiv(str(p['arxiv']))
 
-                list_item(f_out,doi,justified=justified)
+                if 'selected' in p:
+                    list_item(f_out,doi,justified=justified)
 
             end_html_ordered_list(f_out)
 

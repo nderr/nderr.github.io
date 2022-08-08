@@ -26,6 +26,6 @@ In extremely viscous flow, inertia is unimportant. Purcell's scallop theorem sta
 
 Our cells' interiors consist of a complex network of polymer filaments. This porous medium is subject to active stresses imparted by mechanical motor proteins. Experimental results show actin networks actuated by myosin proteins display a wide range of behaviors. Our model of the system, coupling active tension to motor binding dynamics, show behavior that may be reminiscent of thermodynamic phase separation (bottom right) or novel (top left) depending on system parameters.
 
-![Gel patterns](/assets/img/gels.png)
+![Gel patterns](/assets/img/gels.png){: class="scaling"}
 
 
