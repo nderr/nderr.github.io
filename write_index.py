@@ -58,7 +58,7 @@ with open('info.yaml','r') as stream:
 
 emphs        = 'N.J. Derr'
 proper_nouns = info['proper_nouns']
-justified    = True
+justified    = False
 
 with open(fn_in,'r') as f_in, open(fn_out,'w') as f_out:
 
