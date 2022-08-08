@@ -18,9 +18,7 @@ if not fn_in[-3:] == '.in':
 
 fn_out = fn_in[:-3]
 
-arxiv2doi = lambda an : f'10.48550/ARXIV.{an:s}'
-
-def setup_html_ordered_list(fout,key='key',pad='1.9em'):
+def start_html_ordered_list(fout,key='key',pad='1.9em',tot=-1):
 
     print("<style>",file=fout)
     print(f'ol.{key:s}>li::marker {{',file=fout)
@@ -32,6 +30,35 @@ def setup_html_ordered_list(fout,key='key',pad='1.9em'):
     print("}",file=fout)
     print("</style>",file=fout)
 
+    if tot > 0:
+        print(f'<ol reversed class="{key:s}" start="{tot:d}">',file=f_out)
+    else:
+        print(f'<ol reversed class="{key:s}">',file=f_out)
+
+def list_item(fout,doi,justified=False):
+
+    if justified:
+        stags = '<li><p style="text-align:justify;margin:0;">'
+        etags = '</p></li>'
+    else:
+        stags = '<li>'
+        etags = '</li>'
+
+    print(f'{stags:s}{doi.citation():s}{etags:s}',file=fout)
+
+def end_html_ordered_list(fout):
+    print('</ol>',file=fout)
+
+# read in yaml
+with open('info.yaml','r') as stream:
+    try:
+        info = yaml.safe_load(stream)
+    except yaml.YAMLError as exc:
+        print(exc)
+
+emphs        = 'N.J. Derr'
+proper_nouns = info['proper_nouns']
+justified    = True
 
 with open(fn_in,'r') as f_in, open(fn_out,'w') as f_out:
 
@@ -42,63 +69,39 @@ with open(fn_in,'r') as f_in, open(fn_out,'w') as f_out:
         if line.startswith('%%% PREPRINTS %%%'):
 
 
-            key = 'brackets'
-            setup_html_ordered_list(f_out,key=key)
-
-
-            # read in yaml
-            with open('info.yaml','r') as stream:
-                try:
-                    info = yaml.safe_load(stream)
-                except yaml.YAMLError as exc:
-                    print(exc)
-
             tot = len(info['papers']) + len(info['preprints'])
+            start_html_ordered_list(f_out,tot=tot)
 
-            print(f'<ol reversed class="{key:s}" start="{tot:d}">',file=f_out)
+            for obj in info['preprints']:
 
-            np = len(info['preprints'])
-            for i,arxiv_str in enumerate(info['preprints']):
+                arxiv_str = obj['arxiv']
+                descr     = obj['descr']
 
-                doi = d2c.DOI(arxiv2doi(str(arxiv_str)))
-                doi.set_output('html')
-                doi.add_emph_name('N.J. Derr')
-                doi.set_links(True)
-                doi.add_proper_nouns(info['proper_nouns'])
-                print(f'<li>{doi.citation():s}\n\n</li>',file=f_out)
+                doi = d2c.DOI(arxiv_str,arxiv=True,emphs=emphs,links=True,
+                    propers=proper_nouns,output='html',descr=descr)
 
-            print("</ol>",file=f_out)
+                list_item(f_out,doi,justified=justified)
+
+            end_html_ordered_list(f_out)
 
         elif line.startswith('%%% PUBLIST %%%'):
 
-            key = 'brackets'
-            setup_html_ordered_list(f_out,key=key)
+            start_html_ordered_list(f_out)
 
-            print(f'<ol reversed class="{key:s}">',file=f_out)
-
-            # read in yaml
-            with open('info.yaml','r') as stream:
-                try:
-                    info = yaml.safe_load(stream)
-                except yaml.YAMLError as exc:
-                    print(exc)
-
-            np = len(info['papers'])
             for p in info['papers']:
 
-                doi = d2c.DOI(p['doi'])
-                doi.set_output('html')
-                doi.add_emph_name('N.J. Derr')
-                doi.set_links(True)
-                doi.add_proper_nouns(info['proper_nouns'])
+                doi = d2c.DOI(p['doi'],output='html',emphs=emphs,links=True,
+                        propers=proper_nouns)
+
                 if 'cofirst' in p:
                     doi.set_cofirst(True)
 
                 if 'arxiv' in p:
                     doi.add_arxiv(str(p['arxiv']))
 
-                print(f'<li>{doi.citation():s}\n\n</li>',file=f_out)
+                list_item(f_out,doi,justified=justified)
 
-            print("</ol>",file=f_out)
+            end_html_ordered_list(f_out)
+
         else:
             print(line,file=f_out)

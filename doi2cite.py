@@ -19,10 +19,11 @@ class DOI:
 
     def add_arxiv(self,arxiv_num):
 
-        if self.info['publisher'] == 'arXiv':
-            return
+        #txt = f'[arXiv: {arxiv_num:s}]'
+        txt = '[arXiv]'
+        url = f'https://arxiv.org/abs/{arxiv_num:s}'
 
-        self.arxiv = DOI(DOI.arxiv_doi(arxiv_num))
+        self.arxiv = self.link(txt,url)
 
     def bold(self,s):
         if self.output == 'tex':
@@ -54,7 +55,6 @@ class DOI:
 
     def emph(self,s,t,c):
 
-
         if t == 'bold':
             return self.bold(self.col(s,c))
         elif t == 'ital':
@@ -65,11 +65,16 @@ class DOI:
                 print(f'  {t:s}')
             sys.exit(-1)
 
-    def __init__(self,doi,silent=False):
+    def __init__(self,doi,silent=False,arxiv=False,output='tex',links=False,
+            emphs=[],propers=[],cofirst=False,arxiv_cite=None,descr=None):
 
 
         # go get citation information as JSON
-        url = f'https://doi.org/{doi:s}'
+        if arxiv:
+            url = f'https://doi.org/{DOI.arxiv_doi(doi):s}'
+        else:
+            url = f'https://doi.org/{doi:s}'
+
         headers = {'accept': 'application/vnd.citationstyles.csl+json'}
 
         if not silent:
@@ -83,12 +88,23 @@ class DOI:
 
         self.info = r.json()
 
-        self.links = False
-        self.emphs = []
-        self.output = 'tex'
-        self.propers = []
-        self.arxiv = None
-        self.cofirst = None
+        self.links   = links
+        self.output  = output
+
+        self.emphs   = []
+        if type(emphs) is list:
+            for e in emphs:
+                self.add_emph(e)
+        else:
+            self.add_emph(emphs)
+
+        self.propers = propers
+        self.cofirst = cofirst
+        self.arxiv   = None
+        self.descr   = descr
+
+        if arxiv_cite is not None:
+            add_arxiv(arxiv_cite)
 
     def add_proper_nouns(self,propers):
         for p in propers:
@@ -106,6 +122,22 @@ class DOI:
                 print(f'  {ot:s}') 
             sys.exit(-1)
     
+    def add_emph(self,arg):
+
+        if type(arg) is list or type(arg) is tuple:
+            if len(arg) == 1:
+                self.add_emph_name(arg[0])
+            elif len(arg) == 2:
+                self.add_emph_name(arg[0],typ=arg[1])
+            elif len(arg) == 3:
+                self.add_emph_name(arg[0],typ=arg[1],color=arg[2])
+            else:
+                print('bad argument for adding emph:')
+                print(arg)
+                sys.exit(-1)
+        else:
+            self.add_emph_name(arg)
+
     # name - name to ephasize
     # color - text color for name
     # typ - 1=bold, 2=italics
@@ -165,8 +197,10 @@ class DOI:
             a1 = self.name(auth[0])
             a2 = self.name(auth[1])
 
-            if self.cofirst is not None:
+            if self.cofirst:
                 return f'{a1:s}* and {a2:s}*'
+            else:
+                return f'{a1:s} and {a2:s}'
 
         # if more, separate first n-1 with commas
         else:
@@ -176,7 +210,7 @@ class DOI:
             
                 if i < n_auth-1:
 
-                    if i < 2 and self.cofirst is not None:
+                    if i < 2 and self.cofirst:
                         out += self.name(a) + '*, '
                     else:
                         out += self.name(a) + ', '
@@ -190,9 +224,11 @@ class DOI:
         # check if arxiv
         if self.info['publisher'] == 'arXiv':
 
-            year = self.info['issued']['date-parts'][0][0]
-            arxiv_num = self.info['DOI'].split('ARXIV.')[-1]
-            return f'arXiv: {arxiv_num:s}'
+            return ''
+
+#            year = self.info['issued']['date-parts'][0][0]
+#            arxiv_num = self.info['DOI'].split('ARXIV.')[-1]
+#            return f'arXiv: {arxiv_num:s}'
 
         # otherwise, used jouranl formula
         out = self.info['container-title']
@@ -237,14 +273,21 @@ class DOI:
         if self.links:
             title = self.link(title,self.info["URL"])
 
-        j_info = self.journal_info()
+        out = f'{auths:s}. {title:s}'
+
+        if self.info['publisher'] != 'arXiv':
+            j_info = self.journal_info()
+            out += f'. {j_info:s}'
+
+        if self.descr is not None:
+            out += f'. {self.descr:s}'
+
         year = self.info['issued']['date-parts'][0][0]
 
-        out = f'{auths:s}. {title:s}. {j_info:s} ({year:d}).'
+        out += f' ({year:d}).'
 
         if self.arxiv is not None:
-            a_link = self.link('arXiv',self.arxiv.info['URL'])
-            out += f' [{a_link:s}]'
+            out += f' {self.arxiv:s}'
 
         return out
 
@@ -264,13 +307,6 @@ if __name__ == '__main__':
 
     if args.emph is not None:
         for e in args.emph:
-
-
-            if len(e) == 1:
-                doi.add_emph_name(e[0])
-            elif len(e) == 2:
-                doi.add_emph_name(e[0],typ=e[1])
-            else:
-                doi.add_emph_name(e[0],typ=e[1],color=e[2])
+            doi.add_emph(e)
 
     print(doi.citation())

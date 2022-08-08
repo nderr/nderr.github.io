@@ -1,14 +1,94 @@
+education:
+  - institution: Harvard University
+    degrees:
+      - degree: Scientiae Magister
+        initials: S.M.
+        subject:  Applied Mathematics
+        year:     2019
+          
+      - degree:    Philosophiae Doctor
+        inititals: Ph.D.
+        subject:   Applied Mathematics
+        year:      2022
+
+  - institution: Cambridge University
+    degrees:
+      - degree: Master of Advanced Study
+        initials: M.A.St.
+        subject:  Mathematics
+        modifier: with Merit
+        year: 2016
+
+  - institution: University of Wisconsin--Madison
+    degrees:
+      - degree: Bachelor of Science
+        initials: B.S.
+        subject: Applied Mathematics, Engineering and Physics; Astronomy--Physics
+        modifier: with Distinction
+        year: 2015
+      - degree:  Certificate
+        subject: Business
+        year:    2015
+      - degree:  Certificate
+        subject: Computer Science
+        year:    2015
+
+awards:
+  - name:    Graduate Student Fellowship
+    awarder: NSF-Simons Center for Mathematical and Statistical Analysis of Biology at Harvard University
+    date:    '2019--2022'
+    note:    '50% tutition and stipend support per academic year'
+
+  - name:    Certificate of Distinction in Teaching
+    awarder: Bok Center for Teaching and Learning, Harvard University
+    date:    '2018--2022'
+
+  - name:    National Defense Science and Engineering Graduate (NDSEG) Fellowship
+    awarder: U.S. Department of Defense
+    date:    '2015 (applied 2016--2019)'
+    note:    'full tuition and stipend support, 200 awarded nationwide'
+
+  - name:    Marcus L. Urann Fellowship
+    awarder: Honor Society of Phi Kappa Phi
+    date:    '2015'
+    note:    '$15,000 towards graduate study, six awarded nationwide'
+
+  - name:    Theodore Herfurth Award
+    awarder: University of Wisconsin--Madison
+    date:    '2015'
+    note:    Awarded to the two (of 7,000) graduating students who made the most effective use of their time at UW-Madison
+
+  - name:    AMEP Leadership Prize
+    awarder: Math Department, University of Wisconsin--Madison
+    date:    '2015'
+
+  - name:    Hilldale Undergraduate Research Fellowship
+    awarder: University of Wisconsin--Madison
+    date:    '2014'
+
+  - name:    Academic Excellence Scholarship
+    awarder: Higher Education Aids Board, State of Wisconsin
+    date:    '2010'
+
+  - name:    National Merit Scholarship
+    awarder: National Merit Scholarship Program
+    date:    '2010'
+
 preprints:
-  #  - 2206.14379
-  - 2202.03669
+
+  - arxiv: '2206.14379'
+    descr: Preprint
+
+  - arxiv: '2202.03669'
+    descr: Under revision
 
 papers:
 
   - doi:   10.1073/pnas.2105338118
-    arxiv: 2104.00095
+    arxiv: '2104.00095'
 
   - doi:     10.1103/PhysRevLett.125.158002
-    arxiv:   2007.02997
+    arxiv:   '2007.02997'
     cofirst: True
 
   - doi:   10.1029/2019GL083022
@@ -19,22 +99,119 @@ proper_nouns:
   - Reynolds
   - Stokes
 
-education:
-  - institution: Harvard University
-    degrees:
-      - initials: S.M.
-        year: 2019
-      - initials: Ph.D.
-        year: 2022
+presentations:
+  - title: Fluid inertia and the scallop theorem
+    venue: SIAM Conference on the Life Sciences
+    city:  Pittsburgh
+    date:  July 11--14, 2022
 
-  - institution: Cambridge University
-    degrees:
-      - initials: M.A.St.
-        modifier: with Merit
-        year: 2016
+  - title: A projection method for porous media simulation
+    venue: APS March Meeting
+    city:  Chicago
+    date:  March 14--18, 2022
 
-  - institution: University of Wisconsin--Madison
-    degrees:
-      - initials: B.S.
-        modifier: with Distinction
-        year: 2015
+  - title: A projection method for porous media simulation
+    venue: Computational and Applied Math Seminar at Tufts University
+    city:  Medford
+    date:  November 8, 2021
+    invited: true
+
+  - title: A projection method for porous media simulation
+    venue: SIAM Annual Meeting
+    city:  Virtual
+    date:  July 19--23, 2021
+
+  - title: Swimming mechanisms at intermediate Reynolds number
+    venue: Third Annual Conference on Qualitative Approaches in Biology at Northwestern University
+    city:  Virtual
+    date:  November 19--21, 2020
+
+  - title: Steady streaming in a simple reciprocal swimmer
+    venue: APS Division of Fluid Dynamics Annual Meeting
+    city:  Seattle
+    date:  November 23--26, 2019
+
+  - title: Active phase separation in polymer gels
+    venue: Second Annual Conference on Quantitative Approaches in Biology at Northwestern University
+    city:  Evanston
+    date:  October 4--5, 2019
+
+  - title: Active phase separation of biphasic polymer gels
+    venue: MathBio Journal Club at Brandeis University
+    city:  Waltham
+    date:  May 1, 2019
+    invited: true
+
+  - title: Active phase separation of biphasic polymer gels
+    venue: APS March Meeting
+    city:  Boston
+    date:  March 4--8, 2019
+
+  - title: Eulerian numerical methods for flow through poroelastic media
+    venue: APS Division of Fluid Dynamics Annual Meeting
+    city:  Atlanta
+    date:  November 18--20, 2018
+
+  - title: Numerical simulations of isotropic active gels
+    venue: 16th Annual Northeastern Granular Materials Workshop
+    city:  New Haven
+    date:  June 8, 2018
+      
+  - title: Numerical simulations of activity-driven mechanical instabilities in gels
+    venue: APS March Meeting
+    city:  Los Angeles
+    date:  March 5--9, 2018
+
+  - title: Fabry-Perot observations of lunar exospheric potassium emission
+    venue: UW-Madison Undergraduate Research Symposium
+    city:  Madison
+    date:  April 16, 2015
+
+  - title: Fabry-Perot observations of lunar exospheric potassium emission
+    venue: NASA Goddard Space Flight Center Summer Intern Poster Session
+    city:  Greenbelt
+    date:  July 31, 2014
+
+professional:
+  journal_reviews:
+    - SIAM Journal on Applied Mathematics
+    - Journal of Fluid Mechanics
+
+teaching:
+
+  - TA:
+    - code: Applied Math 104
+      name: Complex and Fourier Analysis
+      prof: Professor Ariel Amir
+      term: Fall 2021
+      notes: [Bok]
+
+    - code: Applied Math 205
+      name: Advanced Scientific Computing I
+      prof: Professor Chris H. Rycroft
+      term: Fall 2020
+      notes: [Bok]
+
+    - code: Engineering Sciences 240
+      name: Solid Mechanics
+      prof: Professor Joost Vlassak
+      term: Fall 2019
+      notes: [Bok]
+
+    - code: Applied Math 225
+      name: Advanced Scientific Computing II
+      prof: Professor Chris H. Rycroft
+      term: Spring 2019
+      notes: [Bok]
+
+    - code: Engineering Sciences 220
+      name: Fluid Dynamics
+      prof: Professor James Rice
+      term: Fall 2018
+      notes: []
+
+    - code: Applied Math 225
+      name: Advanced Scientific Computing II
+      prof: Professor Chris H. Rycroft
+      term: Spring 2018
+      notes: [Bok]
