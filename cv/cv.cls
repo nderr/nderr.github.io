@@ -22,6 +22,7 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{changepage}
 
 \pagestyle{empty} % Suppress page numbers
 
@@ -111,11 +112,21 @@
 
 \newenvironment{cvSection}[1]{
   \sectionskip
-  \begingroup
-  \hfil {\large \bf #1} \hfil
-  \endgroup \break
-  \vspace{-0.75em}
-  \hrule
+\begin{adjustwidth}{-0.5em}{0pt}
+    \begingroup
+    %\hfil {\large \bf #1} \hfil
+    {\bf  #1} \hfil
+    \endgroup \break
+
+    {
+      \vspace{-1cm}
+      \rule{\textwidth+0.5em}{1pt}
+    }
+
+  \vspace{-0.7cm}
+
+\end{adjustwidth}
+
 }{}
 
 \newenvironment{school}[3]{

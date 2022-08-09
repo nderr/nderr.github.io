@@ -1,52 +1,64 @@
 education:
   - institution: Harvard University
+    subject:     Applied Mathematics
+    comment:   "Advisor: Professor Chris H. Rycroft"
     degrees:
-      - degree: Scientiae Magister
-        initials: S.M.
-        subject:  Applied Mathematics
-        year:     2019
-          
       - degree:    Philosophiae Doctor
-        inititals: Ph.D.
-        subject:   Applied Mathematics
-        year:      2022
+        initials: Ph.D.
+        start_year:    2016
+        end_year:      2022
 
   - institution: Cambridge University
+    subject:  Mathematics
+    comment:  Part III of the Mathematical Tripos
     degrees:
       - degree: Master of Advanced Study
         initials: M.A.St.
-        subject:  Mathematics
         modifier: with Merit
-        year: 2016
+        start_year: 2015
+        end_year: 2016
 
   - institution: University of Wisconsin--Madison
+    subject: Applied Mathematics, Engineering and Physics (AMEP); Astronomy--Physics
     degrees:
       - degree: Bachelor of Science
         initials: B.S.
-        subject: Applied Mathematics, Engineering and Physics; Astronomy--Physics
         modifier: with Distinction
-        year: 2015
-      - degree:  Certificate
-        subject: Business
-        year:    2015
-      - degree:  Certificate
-        subject: Computer Science
-        year:    2015
+        start_year: 2010
+        end_year: 2015
+
+experience:
+  - employer: Mathematics Department
+    organization: Massachusetts Institute of Technology
+    date:     "2022--present"
+    position:  Instructor in Applied Mathematics
+
+  - employer: Goddard Space Flight Center
+    organization: NASA
+    date:      2014--2016
+    position:  Summer Research Intern
+    advisor:   Dr. Ronald J. Oliversen
+
+  - employer:     Department of Physics
+    organization: University of Wisconsin--Madison
+    date:         2012--2014 
+    position:     Research Assistant
+    advisor:      Professor Edwin J. Mierkiewicz
 
 awards:
   - name:    Graduate Student Fellowship
-    awarder: NSF-Simons Center for Mathematical and Statistical Analysis of Biology at Harvard University
+    awarder: NSF-Simons MathBio Center at Harvard
     date:    '2019--2022'
-    note:    '50% tutition and stipend support per academic year'
+    note:    '50% tutition and stipend support each academic year'
 
   - name:    Certificate of Distinction in Teaching
-    awarder: Bok Center for Teaching and Learning, Harvard University
+    awarder: Bok Center for Teaching, Harvard University
     date:    '2018--2022'
 
-  - name:    National Defense Science and Engineering Graduate (NDSEG) Fellowship
+  - name:    NDSEG Fellowship 
     awarder: U.S. Department of Defense
-    date:    '2015 (applied 2016--2019)'
-    note:    'full tuition and stipend support, 200 awarded nationwide'
+    date:    '2015, applied 2016--2019'
+    note:    'Full tuition and stipend support for three years, 200 awarded nationwide'
 
   - name:    Marcus L. Urann Fellowship
     awarder: Honor Society of Phi Kappa Phi
@@ -56,7 +68,7 @@ awards:
   - name:    Theodore Herfurth Award
     awarder: University of Wisconsin--Madison
     date:    '2015'
-    note:    Awarded to the two (of 7,000) graduating students who made the most effective use of their time at UW-Madison
+    note:    Awarded to two (of 7,000) graduates who made most effective use of their time at UW-Madison
 
   - name:    AMEP Leadership Prize
     awarder: Math Department, University of Wisconsin--Madison
@@ -74,13 +86,32 @@ awards:
     awarder: National Merit Scholarship Program
     date:    '2010'
 
+theses:
+  - type: Doctoral thesis
+    author: N.J. Derr
+    advisor: C.H. Rycroft
+    title: Modeling and simulation of fluid--structure interaction in physics and biology
+    year: 2022
+
+  - type: Cambridge Univeristy Part III Maths essay
+    author: N.J. Derr
+    advisor: T. Montenegro-Johnson
+    title: Artificial phoretic microswimmers
+    year: 2016
+
+  - type: University of Wisconsin--Madison senior thesis
+    author: N.J. Derr
+    advisor: S. Nossal, E.J. Mierkiewicz and R.J. Oliversen
+    title: "Moonlighting in physics: an examination of trends in lunar exospheric potassium emission"
+    year: 2015
+
 preprints:
 
   - arxiv: '2206.14379'
-    descr: Preprint
+    descr: preprint
 
   - arxiv: '2202.03669'
-    descr: Under revision
+    descr: under revision
 
 papers:
 
@@ -106,6 +137,7 @@ presentations:
     venue: SIAM Conference on the Life Sciences
     city:  Pittsburgh
     date:  July 11--14, 2022
+    invited: true
 
   - title: A projection method for porous media simulation
     venue: APS March Meeting
@@ -181,39 +213,39 @@ professional:
 
 teaching:
 
-  - TA:
+  TA:
     - code: Applied Math 104
       name: Complex and Fourier Analysis
-      prof: Professor Ariel Amir
+      prof: Prof. Ariel Amir
       term: Fall 2021
       notes: [Bok]
 
     - code: Applied Math 205
       name: Advanced Scientific Computing I
-      prof: Professor Chris H. Rycroft
+      prof: Prof. Chris H. Rycroft
       term: Fall 2020
       notes: [Bok]
 
     - code: Engineering Sciences 240
       name: Solid Mechanics
-      prof: Professor Joost Vlassak
+      prof: Prof. Joost Vlassak
       term: Fall 2019
       notes: [Bok]
 
     - code: Applied Math 225
       name: Advanced Scientific Computing II
-      prof: Professor Chris H. Rycroft
+      prof: Prof. Chris H. Rycroft
       term: Spring 2019
       notes: [Bok]
 
     - code: Engineering Sciences 220
       name: Fluid Dynamics
-      prof: Professor James Rice
+      prof: Prof. James Rice
       term: Fall 2018
       notes: []
 
     - code: Applied Math 225
       name: Advanced Scientific Computing II
-      prof: Professor Chris H. Rycroft
+      prof: Prof. Chris H. Rycroft
       term: Spring 2018
       notes: [Bok]

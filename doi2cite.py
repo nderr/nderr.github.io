@@ -17,13 +17,23 @@ class DOI:
     def set_links(self,links):
         self.links = links
 
-    def add_arxiv(self,arxiv_num):
+    def add_arxiv_journ(self,arxiv_num):
 
-        #txt = f'[arXiv: {arxiv_num:s}]'
-        txt = '[arXiv]'
+        txt = f'arXiv: {arxiv_num:s}'
+
+        self.arxiv_journ = txt
+
+    def add_arxiv(self,arxiv_num,withNum=False):
+
+        if not withNum:
+            txt = '[arXiv]'
+        else:
+            txt = f'[arXiv: {arxiv_num:s}]'
+
         url = f'https://arxiv.org/abs/{arxiv_num:s}'
 
         self.arxiv = self.link(txt,url)
+
 
     def bold(self,s):
         if self.output == 'tex':
@@ -52,6 +62,8 @@ class DOI:
     def link(self,s,url):
         if self.output == 'html':
             return f'<a href="{url:s}" class="link"><span>{s:s}</span></a>'
+        elif self.output == 'tex':
+            return f'\\href{{{url:s}}}{{{s:s}}}'
 
     def emph(self,s,t,c):
 
@@ -98,13 +110,14 @@ class DOI:
         else:
             self.add_emph(emphs)
 
+        self.arxiv_journ = None
         self.propers = propers
         self.cofirst = cofirst
         self.arxiv   = None
         self.descr   = descr
 
         if arxiv_cite is not None:
-            add_arxiv(arxiv_cite)
+            self.add_arxiv(arxiv_cite)
 
     def add_proper_nouns(self,propers):
         for p in propers:
@@ -278,9 +291,12 @@ class DOI:
         if self.info['publisher'] != 'arXiv':
             j_info = self.journal_info()
             out += f'. {j_info:s}'
+        elif self.arxiv_journ is not None:
+            out += '. ' + self.arxiv_journ
+
 
         if self.descr is not None:
-            out += f'. {self.descr:s}'
+            out += f', {self.descr:s}'
 
         year = self.info['issued']['date-parts'][0][0]
 

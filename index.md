@@ -51,8 +51,8 @@ ol.key>li:not(:last-child) {
 }
 </style>
 <ol reversed class="key">
-<li><b>N.J. Derr</b> and C.H. Rycroft. <a href="https://arxiv.org/abs/2206.14379" class="link"><span><em>A projection method for porous media flow</em></span></a>. Preprint (2022).</li>
-<li><b>N.J. Derr</b>, T. Dombrowski, C.H. Rycroft, and D. Klotsa. <a href="https://arxiv.org/abs/2202.03669" class="link"><span><em>Reciprocal swimming at intermediate Reynolds number</em></span></a>. Under revision (2022).</li>
+<li><b>N.J. Derr</b> and C.H. Rycroft. <a href="https://arxiv.org/abs/2206.14379" class="link"><span><em>A projection method for porous media flow</em></span></a>, preprint (2022).</li>
+<li><b>N.J. Derr</b>, T. Dombrowski, C.H. Rycroft, and D. Klotsa. <a href="https://arxiv.org/abs/2202.03669" class="link"><span><em>Reciprocal swimming at intermediate Reynolds number</em></span></a>, under revision (2022).</li>
 <li>Y.L. Lin, <b>N.J. Derr</b>, and C.H. Rycroft. <a href="http://dx.doi.org/10.1073/pnas.2105338118" class="link"><span><em>Eulerian simulation of complex suspensions and biolocomotion in three dimensions</em></span></a>. Proceedings of the National Academy of Sciences <b>119</b>, e2105338118 (2021). <a href="https://arxiv.org/abs/2104.00095" class="link"><span>[arXiv]</span></a></li>
 <li><b>N.J. Derr</b>*, D.C. Fronk*, C.A. Weber, A. Mahadevan, C.H. Rycroft, and L. Mahadevan. <a href="http://dx.doi.org/10.1103/PhysRevLett.125.158002" class="link"><span><em>Flow-driven branching in a frangible porous medium</em></span></a>. Physical Review Letters <b>125</b>, 158002 (2020). <a href="https://arxiv.org/abs/2007.02997" class="link"><span>[arXiv]</span></a></li>
 </ol>
