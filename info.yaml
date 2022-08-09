@@ -49,7 +49,7 @@ awards:
   - name:    Graduate Student Fellowship
     awarder: NSF-Simons MathBio Center at Harvard
     date:    '2019--2022'
-    note:    '50% tutition and stipend support each academic year'
+    note:    '50% tuition and stipend support each academic year'
 
   - name:    Certificate of Distinction in Teaching
     awarder: Bok Center for Teaching, Harvard University
@@ -93,7 +93,7 @@ theses:
     title: Modeling and simulation of fluid--structure interaction in physics and biology
     year: 2022
 
-  - type: Cambridge Univeristy Part III Maths essay
+  - type: Cambridge University Part III Maths essay
     author: N.J. Derr
     advisor: T. Montenegro-Johnson
     title: Artificial phoretic microswimmers
