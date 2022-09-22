@@ -108,10 +108,10 @@ theses:
 preprints:
 
   - arxiv: '2206.14379'
-    descr: preprint
+    descr: current draft
 
   - arxiv: '2202.03669'
-    descr: under revision
+    descr: Accepted at JFM
 
 papers:
 
@@ -206,12 +206,25 @@ presentations:
     city:  Greenbelt
     date:  July 31, 2014
 
-professional:
-  journal_reviews:
-    - SIAM Journal on Applied Mathematics
-    - Journal of Fluid Mechanics
+service:
+  - name: 'Journal reviewer'
+    range: '2022--present'
+    organization:
+      - Journal of Fluid Mechanics
+      - SIAM Journal on Applied Mathematics
+      - Communications in Applied Mathematics and Computational Science
+  - name: 'Coding instructor'
+    range: '2020--2021'
+    organization: 'Harvard QBio Institute Summer REU Program'
+
 
 teaching:
+
+  recitation:
+    - code: '18.01'
+      name: Single Variable Calculus
+      prof: Prof. Larry Guth
+      term: Fall 2022
 
   TA:
     - code: Applied Math 104
