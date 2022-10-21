@@ -213,8 +213,8 @@ service:
       - Journal of Fluid Mechanics
       - SIAM Journal on Applied Mathematics
       - Communications in Applied Mathematics and Computational Science
-  - name: 'Coding instructor'
-    range: '2020--2021'
+  - name: 'Programming instructor'
+    range: 'Summer 2020, 2021'
     organization: 'Harvard QBio Institute Summer REU Program'
 
 
