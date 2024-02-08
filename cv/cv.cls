@@ -74,7 +74,8 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{{\namesize\bf Curriculum Vitae: \@name}}\hfil
+%    \hfil{{\namesize\bf Curriculum Vitae: \@name}}\hfil
+    \hfil{{\namesize\bf Publication List: \@name}}\hfil
     \nameskip\break
   \endgroup
 }
