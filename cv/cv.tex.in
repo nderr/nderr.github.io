@@ -1,0 +1,110 @@
+\documentclass{cv}
+
+\usepackage[left=0.75in,top=0.75in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{array,tabularx,ltablex}
+\usepackage{scrextend}
+\usepackage{etaremune,enumitem,calc}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Nicholas J. Derr} % Your name
+\address{Massachusetts Institute of Technology}
+\address{Cambridge, MA 02141}
+\address{Mathematics Department}
+\phone{920-382-2939}
+\email{derr@mit.edu}
+\wsite{\smash{https://www.nickderr.me}}
+
+%\address{Pierce Hall, Room 413} % Your address
+
+
+\usepackage{color,xcolor}
+\usepackage[hidelinks,colorlinks]{hyperref}
+\hypersetup{
+  urlcolor=blue!80!cyan
+}
+
+\usepackage{iexec}
+
+\newcommand\bluelink[2]{\href{#1}{\textcolor{blue}{#2}}}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{0em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],align=left,resume,leftmargin=*,%
+        labelwidth=1.25em,
+        labelsep=*,
+        itemsep=\bibsep,parsep=0pt,partopsep=0pt,
+        topsep=0pt}
+%\let\oldendbibenum\endbibenum
+%\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+
+\newenvironment{bibenum*}
+  {\renewcommand\labelenumi{\makebox[1.25em][l]{[\theenumi]}}%
+   \etaremune[
+     topsep=0pt,
+     itemsep=\bibsep,
+     labelwidth=1.25em,
+     parsep=0pt,partopsep=0pt,leftmargin={\labelsep+\labelwidth}]}
+  {\endetaremune}
+
+\makeatother
+
+\frenchspacing
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cvSection}{Education}
+%%% SCHOOLS %%%
+\end{cvSection}
+
+\begin{cvSection}{Research Experience}
+%%% JOBS %%%
+\end{cvSection}
+
+\begin{cvSection}{Research Interests}
+Data-driven inference, continuum mechanics, poroelasticity, biomechanics, fluid-solid interaction, high-performance scientific computing, low-Reynolds number flow, numerical methods, elastoplasticity
+\end{cvSection}
+
+\begin{cvSection}{Awards and Fellowships}
+%%% AWARDS %%%
+\end{cvSection}
+
+\clearpage
+
+\begin{cvSection}{Teaching}
+%%% TEACHING %%%
+
+\mbox{}\hspace{2em}{* denotes Bok Certificate of Distinction in Teaching awarded}
+\end{cvSection}
+
+\begin{cvSection}{Publications}
+%%% PREPRINTS %%%
+%%% PUBLIST %%%
+
+\mbox{}\hspace{2em}{* denotes equal contribution}
+\end{cvSection}
+
+\begin{cvSection}{Invited Talks}
+%%% INVITED %%%
+\end{cvSection}
+
+\begin{cvSection}{Contributed Presentations}
+%%% CONTRIBUTED %%%
+\end{cvSection}
+
+\begin{cvSection}{Service}
+%%% JOURNALS %%% 
+\end{cvSection}
+
+\begin{cvSection}{Other Works}
+%%% THESES %%%
+\end{cvSection}
+
+\end{document}
