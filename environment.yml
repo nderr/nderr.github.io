@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pyyaml
+  - numpy
+  - jinja2
