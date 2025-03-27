@@ -1,31 +1,66 @@
+me:
+  name:
+    first: Nicholas
+    pref: Nick
+    last: Derr
+    mi: J
+  phone:
+    area: 920
+    prefix: 382
+    suffix: 2939
+  website: https://nickderr.me
+  email: derr@mit.edu
+  address:
+    lines:
+      - Mathematics Department
+      - Massachusetts Institute of Technology
+      - 77 Massachusetts Avenue
+    city: Cambridge
+    state: MA
+    zip: 02139
+
+interests:
+  research:
+    - data-driven inference
+    - continuum mechanics
+    - poroelasticity
+    - biomechanics
+    - fluid--structure interaction
+    - scientific computing
+    - low-Reynolds number flow
+    - numerical methods
+    - viscoelasticity
+
+
+
 education:
   - institution: Harvard University
     subject:     Applied Mathematics
     comment:   "Advisor: Professor Chris H. Rycroft"
-    degrees:
-      - degree:    Philosophiae Doctor
-        initials: Ph.D.
-        start_year:    2016
-        end_year:      2022
+    degree:
+      name:    Philosophiae Doctor
+      initials: Ph.D.
+    start_year:    2016
+    end_year:      2022
 
   - institution: Cambridge University
     subject:  Mathematics
     comment:  Part III of the Mathematical Tripos
-    degrees:
-      - degree: Master of Advanced Study
-        initials: M.A.St.
-        modifier: with Merit
-        start_year: 2015
-        end_year: 2016
+    degree:
+      name: Master of Advanced Study
+      initials: M.A.St.
+      modifier: with Merit
+    start_year: 2015
+    end_year: 2016
 
   - institution: University of Wisconsin--Madison
     subject: Applied Mathematics, Engineering and Physics (AMEP); Astronomy--Physics
-    degrees:
-      - degree: Bachelor of Science
-        initials: B.S.
-        modifier: with Distinction
-        start_year: 2010
-        end_year: 2015
+    degree:
+      name: Bachelor of Science
+      initials: B.S.
+      modifier: with Distinction
+    start_year: 2010
+    end_year: 2015
 
 experience:
   - employer: Mathematics Department
