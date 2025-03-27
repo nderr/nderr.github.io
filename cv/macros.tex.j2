@@ -1,0 +1,11 @@
+((*- macro full_name(name) -*))
+    (((- name.first ))) ((( name.mi ))). ((( name.last -)))
+((*- endmacro -*))
+
+((*- macro pref_name(name) -*))
+    (((- name.pref))) ((( name.last -)))
+((*- endmacro -*))
+
+((*- macro phone(me) -*))
+    (((- me.phone.area -)))-(((- me.phone.prefix -)))-(((- me.phone.suffix -)))
+((*- endmacro -*))

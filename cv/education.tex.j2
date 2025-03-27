@@ -1,0 +1,25 @@
+((*- macro dates(edu) -*))
+	(((- edu.start_year )))--((( edu.end_year )))
+((*- endmacro -*))
+
+((*- macro indent(amt) -*))
+	\mbox{}\hspace{ (((- amt -))) }
+((*- endmacro -*))
+
+((*- macro nl(sp) -*))
+	\\[ (((- sp -))) ]
+((*- endmacro -*))
+
+((*- macro edu_info(edu) *))
+	((( edu.institution ))) \hfill ((( dates(edu) ))) \\ ((( indent('1em') )))
+	((( edu.degree.initials ))) (((edu.subject -))) ((* if 'comment' in edu *)) \\ ((( indent('1em') )))
+	((( edu.comment -))) ((* endif -*))
+((*- endmacro -*))
+
+\begin{cvSection}{Education}
+
+((*- for edu in education -*))
+	((( edu_info(edu) ))) (((- nl('0.5em') if not loop.last -)))
+((*- endfor -*))
+
+\end{cvSection}

@@ -1,0 +1,67 @@
+((*- import 'cv/macros.tex.j2' as macs -*))
+
+\documentclass{cv}
+
+
+
+\usepackage[left=0.75in,top=0.75in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{array,tabularx,ltablex}
+\usepackage{scrextend}
+\usepackage{etaremune,enumitem,calc}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{             (((- macs.full_name(me.name) -))) } % Your name
+\address{Massachusetts Institute of Technology}
+\address{Cambridge, MA 02141}
+\address{Mathematics Department}
+\phone{            ((( macs.phone(me) ))) }
+\email{            ((( me.email ))) }
+\wsite{\smash{     ((( me.website )))} }
+
+%\address{Pierce Hall, Room 413} % Your address
+
+
+\usepackage{color,xcolor}
+\usepackage[hidelinks,colorlinks]{hyperref}
+\hypersetup{
+  urlcolor=blue!80!cyan
+}
+
+\usepackage{iexec}
+
+\newcommand\bluelink[2]{\href{#1}{\textcolor{blue}{#2}}}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{0em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],align=left,resume,leftmargin=*,%
+        labelwidth=1.25em,
+        labelsep=*,
+        itemsep=\bibsep,parsep=0pt,partopsep=0pt,
+        topsep=0pt}
+%\let\oldendbibenum\endbibenum
+%\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+
+\newenvironment{bibenum*}
+  {\renewcommand\labelenumi{\makebox[1.25em][l]{[\theenumi]}}%
+   \etaremune[
+     topsep=0pt,
+     itemsep=\bibsep,
+     labelwidth=1.25em,
+     parsep=0pt,partopsep=0pt,leftmargin={\labelsep+\labelwidth}]}
+  {\endetaremune}
+
+\makeatother
+
+\frenchspacing
+
+\begin{document}
+
+((* include 'cv/education.tex.j2' *))
+
+\end{document}
