@@ -5,3 +5,4 @@ dependencies:
   - pyyaml
   - numpy
   - jinja2
+  - requests

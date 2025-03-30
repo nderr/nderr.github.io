@@ -1,0 +1,179 @@
+\documentclass[letterpaper]{derr-resume} % Use US Letter paper, change to a4paper for A4 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\lastupdated % Print the Last Updated text at the top right
+
+\namesection{(((me.name.pref)))}{(((me.name.last)))}{ % Your name
+\href{(((me.website)))}{(((me.website)))} | \href{https://github.com/(((me.github)))}{github://(((me.github)))} | \href{mailto:(((me.email)))}{(((me.email)))} 
+}
+
+%----------------------------------------------------------------------------------------
+%	LEFT COLUMN
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.32\textwidth} % The left column takes up 33% of the text width of the page
+
+%-----------------
+% Education
+%------------------------------------------------
+
+\section{Education} 
+
+((* for edu in education *))
+\subsection{(((edu.institution)))}
+\descript{(((edu.initials))) (((edu.subject)))}
+\location{(((edu.year))) | (((edu.location)))}
+((* if 'addl' in edu *)) ((* for line in edu.addl *))
+\mbox{}\hspace{0.1em}((( line )))
+((* endfor *)) ((* endif *))
+
+\sectionspace
+
+((* endfor *))
+
+
+
+%------------------------------------------------
+% Skills
+%------------------------------------------------
+
+\section{Skills}
+
+\subsection{Programming}
+
+Python \textbullet{} C++ \textbullet{} Open MPI \textbullet{} OpenMP \\
+Matlab \textbullet{} Mathematica \textbullet{} Shell \textbullet{} \LaTeX \\
+JavaScript \textbullet{} Perl \textbullet{} Gnuplot \textbullet{} Java  \\ 
+
+%Java \textbullet{} Shell \textbullet{} JavaScript \textbullet{} Matlab \\
+%OCaml \textbullet{} Python \textbullet{} Rails \textbullet{} \LaTeX\ \\ 
+%\location{Over 1000 lines:}
+%C \textbullet{} C++ \textbullet{} CSS \textbullet{} PHP \textbullet{} Assembly \\
+%\location{Familiar:}
+%AS3 \textbullet{} iOS \textbullet{} Android \textbullet{} MySQL
+
+\sectionspace % Some whitespace after the section
+
+\subsection{Mathematical Modeling}
+Data-Driven Inference \textbullet{} Fluid Dynamics \\
+Solid Mechanics \textbullet{} Viscoelasticity \\
+Finite Elements \textbullet{} Perturbation Methods \\
+
+\sectionspace
+
+\subsection{Communication}
+Data Visualization \textbullet{} Technical Writing \\
+Public Speaking \textbullet{} Active Listening
+
+\sectionspace
+
+\section{About Me}
+
+\sectionspace
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the left column
+\hfill
+%
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t]{0.67\textwidth} % The right column takes up 66% of the text width of the page
+
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+
+\section{Experience}
+
+((* for exp in experience *))
+((* set outer_first = loop.first *))
+\runsubsection{(((exp.institution)))}
+\hfill \location{(((exp.location)))}
+((* for pos in exp.positions *))
+\rundescript{(((pos.title)))} \hfill \location{(((pos.start)))--(((pos.end)))}
+((* if outer_first and loop.first *)) \vspace{\topsep} ((* endif *)) % Hacky fix for awkward extra vertical space
+\begin{tightitemize} ((*- for b in pos.bullets -*))
+\item (((b)))
+((*- endfor -*))
+\end{tightitemize}
+((* endfor *))
+
+\sectionspace
+
+((* endfor *))
+
+
+
+%------------------------------------------------
+% Awards
+%------------------------------------------------
+
+\section{Honors} 
+
+\subsection{Fellowships}
+\begin{tabular}{@{}lll@{}}
+((* for award in awards if award.type == 'fellowship' *))
+%(((award.year)))  & ((* if 'short_awarder' in award *)) ((( award.short_awarder ))) ((* else *)) (((award.awarder ))) ((* endif *))  & (((award.name))) \\
+(((award.year)))    & (((award.name))) & (((award.scale)))\\
+((* endfor *))
+\end{tabular}
+
+\sectionspace
+
+\subsection{Awards}
+\begin{tabular}{@{}lll@{}}
+((* for award in awards if award.type == 'award' *))
+%(((award.year)))  & ((* if 'short_awarder' in award *)) ((( award.short_awarder ))) ((* else *)) (((award.awarder ))) ((* endif *))  & (((award.name))) \\
+(((award.year)))  & (((award.name))) \\
+((* endfor *))
+\end{tabular}
+
+\sectionspace % Some whitespace after the section
+
+\subsection{Selected Publications}
+\begin{tabular}{@{}llr@{}}
+((* for p in selected *))
+((( p.title(link=True,maxc=7) ))) &  ((( p.j_inits() )))  & (((p.cited_by() ))) citations \\
+((* endfor *))
+\end{tabular}
+
+\sectionspace
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the right column
+
+\footer{abc}
+
+%----------------------------------------------------------------------------------------
+%	SECOND PAGE (EXAMPLE)
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\begin{minipage}[t]{0.35\textwidth} % The left column takes up 33% of the text width of the page
+
+%\section{Example Section}
+
+%\end{minipage} % The end of the left column
+%\hfill
+%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+%\section{Example Section 2}
+
+%\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

@@ -1,6 +1,11 @@
 _site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
+**/.*/
 vender
 cache
+**.pyc
+**.swp
+**.aux
+**.tex
+**.log
+**.out
+**.bak
