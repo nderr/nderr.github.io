@@ -90,7 +90,7 @@ class DOI:
         headers = {'accept': 'application/vnd.citationstyles.csl+json'}
 
         if not silent:
-            print(f'Fetching DOI {doi:s}')
+            print(f'Fetching DOI {doi:s} at url {url:s}...')
         r = req.get(url,headers=headers)
 
         # check for success
