@@ -6,3 +6,4 @@ dependencies:
   - numpy
   - jinja2
   - requests
+env_prompt: '({prefix.split("/")[-1]}) '

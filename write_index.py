@@ -50,7 +50,7 @@ def end_html_ordered_list(fout):
     print('</ol>',file=fout)
 
 # read in yaml
-with open('info.yaml','r') as stream:
+with open('info.yml','r') as stream:
     try:
         info = yaml.safe_load(stream)
     except yaml.YAMLError as exc:

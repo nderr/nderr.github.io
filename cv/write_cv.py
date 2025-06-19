@@ -23,7 +23,7 @@ if not fn_in[-3:] == '.in':
 fn_out = fn_in[:-3]
 
 # read in yaml
-with open('../info.yaml','r') as stream:
+with open('../info.yml','r') as stream:
     try:
         info = yaml.safe_load(stream)
     except yaml.YAMLError as exc:

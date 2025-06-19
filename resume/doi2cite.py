@@ -11,6 +11,14 @@ class DOI:
     output_types = ['tex','markdown','html']
     emph_types   = ['bold','ital']
 
+    def j_brief(self):
+        if type(self.info['short-container-title']) is list:
+            # get first journal title
+            j = self.info['short-container-title'][0]
+        else:
+            j = self.info['short-container-title']
+        return self.info['short-container-title']
+
     def j_inits(self):
         # get journal initials
         j = self.info['container-title']

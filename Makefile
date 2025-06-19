@@ -1,4 +1,4 @@
-#all: index.md assets/files/cv.pdf
+all: index.md assets/files/cv.pdf
 #all: cv/out.pdf
 
 ENV=.conda
