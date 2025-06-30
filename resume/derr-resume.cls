@@ -43,8 +43,10 @@
 \definecolor{headings}{HTML}{6A6A6A} % The color of the large sections
 \definecolor{subheadings}{HTML}{333333} % The color of subsections and places worked/studied
 \definecolor{date}{HTML}{666666} % The color used for the Last Updated text at the top right
+%\colorlet{links}{primary!80!blue} % The color used for links
+\colorlet{links}{primary}
 
-\usepackage[colorlinks=true,urlcolor=primary]{hyperref} % Required for links
+\usepackage[colorlinks=true,urlcolor=links]{hyperref} % Required for links
 
 %----------------------------------------------------------------------------------------
 %	FONTS

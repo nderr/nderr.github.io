@@ -6,7 +6,7 @@ me:
     mi: J
   phone: 920-382-2939
   website: https://nickderr.me
-  email: derr@mit.edu
+  email: nicholas.derr@gmail.com
   address:
     lines:
       - Mathematics Department
@@ -84,14 +84,15 @@ experience:
         start: Jul 2022
         end: present
         bullets:
-          - Developed novel methods for data-driven inference of jellyfish neural dynamics
-          - Designed and taught courses in applied mathematics and scientific communication
+          - Designed and implemented Python code suite for neuronal tracking and data-driven inference of jellyfish neuromuscular dynamics in compressed spectral space
+#          - Developed novel methods for data-driven inference of jellyfish neural dynamics
+          - Developed and taught undergratuate courses and recitations in mathematical modeling, continuum mechanics, and scientific communication (avg. rating 6.8/7)
 
       - title: PRIMES Research Mentor
         start: Jan 2023
         end: Dec 2023
         bullets:
-          - Managed high school student's research project via weekly progress meetings
+          - Proposed and mentored student research project on \href{https://math.mit.edu/research/highschool/primes/materials/2023/Derr-Zhao.pdf}{\textbf{torque induction via oscillatory flows}}, teaching requisite background and supervising progress
 
   - institution: Harvard University
     location: Cambridge, MA
@@ -100,16 +101,17 @@ experience:
         start: Aug 2016
         end: May 2022
         bullets:
-          - Analyzed biological swimming methods using \href{https://github.com/nderr/reciprocal_swimming}{\textbf{custom C++ finite element solver}}
-          - Created first continuum erosion model capable of producing branching patterns
-          - Co-wrote \href{https://github.com/ylunalin/RMT3D}{\textbf{RMT3D}}, a C++ package simulating behavior of soft immersed solids
-          - Developed new methods for simulation of cell interiors and other porous media
+          - Implemented \href{https://github.com/nderr/reciprocal_swimming}{\textbf{custom C++ finite element solver}}, reducing sim.\ time from weeks to days, to understand unexplained direction-switches in model reciprocal swimmers
+          - Designed erosion model and C++ solver to obtain the first examples of continuum-derived, flow-driven branching channelization in porous media
+          - Developed and parallelized \href{https://github.com/ylunalin/RMT3D}{\textbf{RMT3D}}, a C++/MPI Eulerian fluid--structure interaction solver, achieving 70--80\% strong scaling over 16 cores up to 192$^3$ grids
+          - Modeled collagen assembly rates within confining gels, explaining experimentally observed dependence of fibril formation on cross-link strength and type
+          - Extended Navier--Stokes projection methods to porous media flow, enabling 3D parallelized C++ simulation of motor-driven phase separation in cytoskeletal gels 
 
       - title: Teaching Fellow
         start: Aug 2017
         end: May 2022
         bullets:
-          - Planned and led recitations for applied mathematics and engineering courses
+          - Planned and led recitations for graduate-level math and engineering courses including continuum mechanics, scientific computing, and complex analysis
 
   - institution: NASA Goddard Space Flight Center
     location: Greenbelt, MD
@@ -118,33 +120,35 @@ experience:
         start: Jun 2014
         end: Aug 2016
         bullets:
-          - Observed lunar exospheric potassium emission at McMath--Pierce Solar Telescope
-          - Developed Matlab and Python library to process low signal-to-noise observations
+          - Conducted line-of-sight observations of lunar K emission, acquiring $>10^3$ frames
+          - Optimized Python data-reduction routines to subtract asymmetric background illumination, recovering 30\% of previously unusable measurements
+          - Automated transformation of observation location from celestial to selenographic coordinates using Java, reducing task time from several days to minutes
 
   - institution: University of Wisconsin #--Madison
     location: Madison, WI
     positions:
-      - title: Physics Research Assistant
+      - title: Research Assistant
         start: Sep 2012
         end: Jun 2014
         bullets:
-          - Improved and implemented Python algorithm for processing astronomical data
-          - Modeled layout of proposed mobile observatory using 3D CAD software
+          - Ported IDL codebase to modern Python, improving efficiency and maintainability
+          - Developed segment-based uncertainty quantification, reducing spectral peak widths by 5\% for more accurate measurements of exospheric velocities
+          - Modeled layout and tolerances of proposed mobile observatory using SolidWorks
 
-      - title: "Exploring Engineering Summer Camp Counselor"
-        start: Jun 2011
-        end: Aug 2013
-        bullets:
-          - Led middle school students in hands-on engineering projects and activities
-
-      - title: Computer Lab Monitor
-        start: Sep 2010
-        end: May 2015
-        bullets:
-          - Supervised users and logged attendance at Social Sciences computer lab
+#      - title: "Exploring Engineering Summer Camp Counselor"
+#        start: Jun 2011
+#        end: Aug 2013
+#        bullets:
+#          - Led middle school students in hands-on engineering projects and activities
+#
+#      - title: Computer Lab Monitor
+#        start: Sep 2010
+#        end: May 2015
+#        bullets:
+#          - Supervised users and logged attendance at Social Sciences computer lab
 
 awards:
-  - name:    Harvard--NSF MathBio Grad Fellowship
+  - name:    MathBio Grad Fell. (Harvard)
     awarder: NSF-Simons MathBio Center at Harvard
     date:    '2019--2022'
     note:    '50% tuition and stipend support each academic year'
@@ -154,7 +158,7 @@ awards:
     scale: 3 yr, 50\% support
     type:  fellowship
 
-  - name:    Certificate of Distinction in Teaching
+  - name:    Dist. in Teaching (Harvard, $\times$5)
     awarder: Bok Center for Teaching, Harvard University
     date:    '2018--2022'
     short_awarder: Bok Center for Teaching, Harvard
@@ -163,7 +167,7 @@ awards:
     scale: Harvard, 5 times
     type: award
 
-  - name:    NDSEG Fellowship 
+  - name:    NDSEG Fellowship (national)
     awarder: U.S. Department of Defense
     #date:    '2015, applied 2016--2019'
     date:    '2016--2019'
@@ -173,7 +177,7 @@ awards:
     type:  fellowship
 
 
-  - name:    Marcus L. Urann Fellowship
+  - name:    Marcus Urann Fell. (national)
     awarder: Honor Society of Phi Kappa Phi
     date:    '2015'
     note:    '$15,000 towards graduate study, six awarded nationwide'
@@ -182,7 +186,7 @@ awards:
     type:  fellowship
 
 
-  - name:    Theodore Herfurth Award
+  - name:    Theodore Herfurth Award (UW)
     awarder: University of Wisconsin--Madison
     date:    '2015'
     note:    Awarded to two (of 7,000) graduates who made most effective use of their time at UW-Madison
@@ -191,7 +195,7 @@ awards:
     scale: 2/UW grads
     type: award
 
-  - name:    AMEP Leadership Prize
+  - name:    AMEP Leadership Prize (UW)
     awarder: Math Department, University of Wisconsin--Madison
     date:    '2015'
     short_awarder: Math Department, UW-Madison
@@ -199,7 +203,8 @@ awards:
     scale: 1/UW AMEP
     type: award
 
-  - name:    Hilldale Undergrad Research Fellowship
+#  - name:    Hilldale Undergrad Research Fellowship
+  - name:    Hilldale Research Fell. (UW)
     awarder: University of Wisconsin--Madison
     date:    '2014'
     short_awarder: UW-Madison
@@ -207,7 +212,7 @@ awards:
     scale: 100/UW students
     type: fellowship
 
-  - name:    Academic Excellence Scholarship
+  - name:    Acad. Excel. Scholarship (state)
     awarder: Higher Education Aids Board, State of Wisconsin
     date:    '2010'
     short_awarder: State of Wisconsin
@@ -261,6 +266,7 @@ papers:
     selected: True
 
   - doi:   10.1029/2019GL083022
+    selected: True
   - doi:   10.1029/2018JE005717
 
 proper_nouns:

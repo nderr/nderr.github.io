@@ -12,6 +12,11 @@
 \href{(((me.website)))}{(((me.website)))} | \href{https://github.com/(((me.github)))}{github://(((me.github)))} | \href{mailto:(((me.email)))}{(((me.email)))} 
 }
 
+%\section{About Me}
+Results-driven applied mathematician with deep expertise designing and implementing high-performance, parallelized C++ code bases for fluid–structure interaction and porous media simulation. Passionate about crafting efficient solvers behind clean, user-friendly interfaces, enabling integration without sacrificing speed or scalability. Eager to transition into a software development role where I can collaborate on fast-paced teams to deliver novel, efficient simulation solutions to consumers.
+
+%\sectionspace
+
 %----------------------------------------------------------------------------------------
 %	LEFT COLUMN
 %----------------------------------------------------------------------------------------
@@ -22,10 +27,6 @@
 % Education
 %------------------------------------------------
 
-\section{About Me}
-Experienced applied mathmatician with a passion for designing and implementing computational solutions to challenging problems.
-
-\sectionspace
 
 \section{Education} 
 
@@ -47,13 +48,37 @@ Experienced applied mathmatician with a passion for designing and implementing c
 % Skills
 %------------------------------------------------
 
+
+\section{Honors} 
+
+\subsection{Fellowships}
+\begin{tabular}{@{}lll@{}}
+((* for award in awards if award.type == 'fellowship' *))
+%(((award.year)))  & ((* if 'short_awarder' in award *)) ((( award.short_awarder ))) ((* else *)) (((award.awarder ))) ((* endif *))  & (((award.name))) \\
+(((award.year)))    & (((award.name))) \\ %& (((award.scale)))\\
+((* endfor *))
+\end{tabular}
+
+\sectionspace
+
+\subsection{Awards}
+\begin{tabular}{@{}lll@{}}
+((* for award in awards if award.type == 'award' *))
+%(((award.year)))  & ((* if 'short_awarder' in award *)) ((( award.short_awarder ))) ((* else *)) (((award.awarder ))) ((* endif *))  & (((award.name))) \\
+(((award.year)))  & (((award.name))) \\
+((* endfor *))
+\end{tabular}
+
+
+\sectionspace % Some whitespace after the section
+
 \section{Skills}
 
 \subsection{Programming}
 
-Python \textbullet{} C++ \textbullet{} Open MPI \textbullet{} OpenMP \\
+C++ \textbullet{} Python \textbullet{} Open MPI \textbullet{} OpenMP \\
 Matlab \textbullet{} Mathematica \textbullet{} Shell \textbullet{} \LaTeX \\
-JavaScript \textbullet{} Perl \textbullet{} Gnuplot \textbullet{} Java  \\ 
+Java \textbullet{} Gnuplot \textbullet{} JavaScript \textbullet{} Perl  \\ 
 
 %Java \textbullet{} Shell \textbullet{} JavaScript \textbullet{} Matlab \\
 %OCaml \textbullet{} Python \textbullet{} Rails \textbullet{} \LaTeX\ \\ 
@@ -62,7 +87,7 @@ JavaScript \textbullet{} Perl \textbullet{} Gnuplot \textbullet{} Java  \\
 %\location{Familiar:}
 %AS3 \textbullet{} iOS \textbullet{} Android \textbullet{} MySQL
 
-\sectionspace % Some whitespace after the section
+\sectionspace
 
 \subsection{Mathematical Modeling}
 Data-Driven Inference \textbullet{} Fluid Dynamics \\
@@ -121,36 +146,17 @@ Public Speaking \textbullet{} Active Listening
 % Awards
 %------------------------------------------------
 
-\section{Honors} 
+\vspace{-1em}
 
-\subsection{Fellowships}
-\begin{tabular}{@{}lll@{}}
-((* for award in awards if award.type == 'fellowship' *))
-%(((award.year)))  & ((* if 'short_awarder' in award *)) ((( award.short_awarder ))) ((* else *)) (((award.awarder ))) ((* endif *))  & (((award.name))) \\
-(((award.year)))    & (((award.name))) & (((award.scale)))\\
-((* endfor *))
-\end{tabular}
 
-\sectionspace
-
-\subsection{Awards}
-\begin{tabular}{@{}lll@{}}
-((* for award in awards if award.type == 'award' *))
-%(((award.year)))  & ((* if 'short_awarder' in award *)) ((( award.short_awarder ))) ((* else *)) (((award.awarder ))) ((* endif *))  & (((award.name))) \\
-(((award.year)))  & (((award.name))) \\
-((* endfor *))
-\end{tabular}
-
-\sectionspace % Some whitespace after the section
-
-\subsection{Selected Publications}
+\section{Selected Publications}
 \begin{tabular}{@{}llr@{}}
 ((* for p in selected *))
-((( p.title(link=True,maxc=7) ))) &  ((( p.j_inits() )))  & (((p.cited_by() ))) citations \\
+\textcolor{links}{((( p.title(link=True,maxc=7) )))} &  ((( p.j_inits() )))  & (((p.cited_by() ))) citations \\
 ((* endfor *))
 \end{tabular}
 
-\sectionspace
+%\sectionspace
 
 %----------------------------------------------------------------------------------------
 

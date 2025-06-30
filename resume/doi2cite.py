@@ -321,6 +321,12 @@ class DOI:
         # send to lower case
         title = self.info['title'].lower()
 
+        # hack for K paper
+        title = title.split(' ')
+        if title[0].startswith('high'):
+            title[0] = 'high-resolution'
+        title = ' '.join(title)
+
         # capitalize any proper nouns
         for p in self.propers:
             title = title.replace(p.lower(),p)
