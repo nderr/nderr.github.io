@@ -43,7 +43,12 @@ with open(fn_in,'r') as f_in, open(fn_out,'w') as f_out:
 
         if line.startswith('%%% JOBS %%%'):
 
+            print(info['experience'])
             for i_d,job in enumerate(info['experience']):
+                
+                print('---------------------')
+                print(job)
+                print('---------------------')
 
                 pos  = job['position']
                 empl = job['employer']

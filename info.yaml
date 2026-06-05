@@ -9,15 +9,15 @@ me:
     prefix: 382
     suffix: 2939
   website: https://nickderr.me
-  email: derr@mit.edu
+  email: nderr@wisc.edu
   address:
     lines:
       - Mathematics Department
-      - Massachusetts Institute of Technology
-      - 77 Massachusetts Avenue
-    city: Cambridge
-    state: MA
-    zip: 02139
+      - University of Wisconsin--Madison
+      - 480 Lincoln Drive
+    city: Madison
+    state: WI
+    zip: 53706
 
 interests:
   research:
@@ -64,8 +64,13 @@ education:
 
 experience:
   - employer: Mathematics Department
+    organization: University of Wisconsin--Madison
+    date:     "2025--present"
+    position:  Mathematics Instructor
+
+  - employer: Mathematics Department
     organization: Massachusetts Institute of Technology
-    date:     "2022--present"
+    date:     "2022--2025"
     position:  Instructor in Applied Mathematics
 
   - employer: Goddard Space Flight Center

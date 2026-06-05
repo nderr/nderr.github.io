@@ -29,8 +29,13 @@ education:
 
 experience:
   - employer: Mathematics Department
+    organization: University of Wisconsin--Madison
+    date: '2025--present'
+    position: Mathematics Instructor
+    
+  - employer: Mathematics Department
     organization: Massachusetts Institute of Technology
-    date:     "2022--present"
+    date:     "2022--2025"
     position:  Instructor in Applied Mathematics
 
   - employer: Goddard Space Flight Center

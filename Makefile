@@ -30,5 +30,5 @@ cv/out.pdf: cv/*tex.j2 info.yaml jinja.py
 	cd cv && pdflatex out.tex
 
 
-assets/files/cv.pdf: cv/cv.tex.in info.yaml cv/write_cv.py
+assets/files/cv.pdf: cv/cv.tex.in info.yaml info_cv.yaml cv/write_cv.py
 	cd cv && ./write_cv.py cv.tex.in && pdflatex cv.tex && pdflatex cv.tex && cp cv.pdf ../assets/files/cv.pdf
